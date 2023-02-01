@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/cssPerfil.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Paciente | Perfil</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="imagem">
+        </div>
+
+        <div class="nome">
+            <a href="PaginaInicialPaciente.html">Seja bem vindo(a), <b> <%=pacientes.Nome%></b></a>
+        </div>
+    </div>
+
+    <div class="quadro">
+        <br>
+        <div class="infos">
+            <div class="foto">
+                <img src="../imagem/user.png" style="width: 75%;"> 
+            </div>
+            <div class="informacoes">
+                <div class="informacoes1">
+                    <input type="text" value="<%=pacientes.Nome%>" disabled>
+                    <input type="text" placeholder=" Endereço:">
+                </div>
+
+                <div class="informacoes2">
+                    <input type="text" value="<%=pacientes.EDV%>" disabled>
+                    <input type="text" value="<%=pacientes.CPF_Paciente%>" disabled>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="consultas">
+            <br>
+            <img src="../imagem/imagemConsultas.jpg" style="max-width: 80%;">
+            <br><br>
+            <h2>CONSULTAS</h2>
+            <button><a href="/verConsultas" style="text-decoration: none; color: black;">Continue</a></button>
+        </div>
+    </div>
+
+   
+
+
+
+    <div class="footer">
+    </div>
+
+</body>
+
+</html>

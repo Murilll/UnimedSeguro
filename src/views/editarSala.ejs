@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+    <title>Alunos</title>
+</head>
+
+<body>
+    <div class="headerbosch"></div>
+    <div class="header">
+        <div class="nav">
+            <div id="inicio">
+                <a href="/">&nbsp; CONTROLE DE ALUNOS</a>
+            </div>
+
+            <div id="boschLogo">
+                <img src="/img/logobosch.png" style="width: 150px; margin-top: -10%;">
+            </div>
+
+            <div id="final">
+                <a><b>Cadastrar: &nbsp; &nbsp;</b></a>
+                <a href="../alunos" id="teste">Alunos</a>
+                |
+                <a href="../salas">Sala</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="editarSala">
+        <form method="post" action="/editarSala/<%= salas.IDSala %>">
+            <div class="formSala">
+                <h2>EDITAR SALA</h2>
+                    <div><input value="<%= salas.Nome %>" type="text" name="nome" id="nomeSala"></div>
+                    <div><input value="<%= salas.Capacidade %>" type="text" name="capacidade" id="capacidadeSala"></div>
+                    <input type="submit" value="Cadastrar" id="cadastrar" style="width: 150%;"></input>
+            </div>
+        </form>
+        <form method="post" action="/excluirSala/<%= salas.IDSala %>">
+            <input type="submit" value="Excluir" id="cadastrar"></input>
+        </form>
+    </div>
+
+    <div class="footer">
+        <img src="/img/logobosch.png" style="width: 150px;"><br>
+        ETS | Engineering Technical School ™<br>
+        <br><br>
+    </div>
+    <div class="headerbosch"></div>
+</body>
+
+</html>

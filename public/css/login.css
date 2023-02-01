@@ -1,0 +1,223 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(121, 216, 118);
+}
+
+/* FOTOOOOO */
+
+.foto:hover #more {
+    transition: 0.2s;
+    opacity: 1;
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fotoUsuario {
+    width: 150px;
+    height: 150px;
+    border-radius: 99px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.1s;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#more{
+    width: 50px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#more{
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* FOTOOOOO */
+.header{
+    display: flex;
+    height: 4rem;
+    background-color: rgb(51, 110, 54);
+}
+
+
+.login{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 6vh;
+    display: flex;
+    height: 50rem;
+}
+
+
+.imagem{
+    margin-top: 8vh;
+    width: 50%;
+    margin-right: 5%;
+    margin-left: 15%;
+    border-radius: 20px;
+    background-image: url("../imagem/senhora.jpg");
+    height: 35rem;
+    background-size: cover; /*USAR PRA CARALHO*/
+}
+
+.opcoesDados{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 20rem;
+    width: 50%;
+    margin-right: 15%;
+    border-radius: 20px;
+}
+
+.opcoes{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 20rem;
+    width: 50%;
+    margin-right: 15%;
+    border-radius: 20px;
+}
+
+.opcoesLogin{
+    padding-left: 4vh;
+    padding-right: 4vh;
+    border-radius: 10px;
+    background-color: aliceblue;
+    width: 100%;
+    height: 40%;
+}
+.botoesLogin{
+    margin-top: 6%;
+    height: 60%;
+}
+
+
+.opcoesCadastro{
+    padding-left: 4vh;
+    padding-right: 4vh;
+    border-radius: 5px;
+    margin-top: 10%;
+    background-color: aliceblue;
+    width: 100%;
+    height: 40%;
+}
+
+.dados{
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    padding-top: 5%;
+    flex-direction: column;
+    background-color: rgb(238, 234, 234);
+    border-radius: 40px;
+    align-items: center;
+}
+.inserir{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.inserir{
+    width: 70%;
+}
+
+.dados form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.inserir input{
+    width:100%;
+    height:4Vh;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5%;
+}
+
+.inserir button{
+    width:100%;
+    margin-top: 5%;
+    height:4Vh;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(245, 55, 55);
+}
+
+.texto{
+    height: 20%;
+}
+
+.botoes{
+    margin-top: 6%;
+    display: flex;
+    justify-content: space-around;
+    height: 60%;
+}
+
+.botoes button{
+    background-color: rgb(50, 118, 243);
+    border-radius: 30px;
+    border: none;
+    font-size: large;
+    width: 20vh;
+    height: 50%;
+}
+
+.botoes input{
+    border-radius: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 12%;
+    font-size: large;
+    border: none;
+}
+
+.botoesDados button{
+    background-color: rgb(50, 118, 243);
+    border-radius: 30px;
+    border: none;
+    font-size: large;
+    width: 100%;
+    height: 4vh;
+}
+.botoesDados input{
+    border-radius: 30px;
+    height: 4vh;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    font-size: large;
+    border: none;
+}
+
+
+.footer{
+    background-color: rgb(51, 110, 54);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem; 
+}

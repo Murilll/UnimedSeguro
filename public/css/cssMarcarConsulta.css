@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(121, 216, 118);
+    font-family: 'Montserrat', sans-serif;
+}
+.header{
+    display: flex;
+    height: 4rem;
+    background-color: rgb(51, 110, 54);
+    align-items: center;
+}
+
+.nome{
+    margin-left: 2vh;
+}
+
+.nome a{
+    text-decoration: none; 
+    color: black; 
+    transition: 0.2s;
+}
+
+.nome a:hover{
+    font-size: 105%;
+    transition: 0.2s;
+}
+
+.imagem{
+    margin-left: 2vh;
+}
+
+
+
+
+
+
+/* MAIN */
+.corpo{
+    justify-content: center;
+    margin-top: 2%;
+    display: flex;
+}
+
+
+
+
+/* FILTROS */
+
+
+
+.tipo_medico{
+    border-radius: 5px;
+    padding-left: 2vh ;
+    width: 20%;
+    margin-left: 5%;
+    margin-top: 2%;
+    height: 10%;
+    display: flex;
+    background-color:rgb(255, 255, 255);
+    align-items: center;
+}
+
+.tipo_medico select{
+    height: 4.5vh;
+    width: 40%;
+    font-size: 1.7vh;
+    border: none;
+    border-radius: 5px;
+    
+}
+/* FIM FILTROS */
+
+
+
+/* MEDICOS */
+.medicos{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#cardMedico{
+    background-color: rgb(255, 255, 255);
+    height: 20vh;
+    margin-top: 2%;
+    border-radius: 10px;
+    display: flex;
+
+}
+
+#cardMedico form{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-left: 10%;
+}
+
+#cardMedico{
+    transition-duration: 500ms;
+    transition-property: margin-right;
+}
+
+.fotoMedico{
+    width: 30%;
+    border-radius: 10px;
+}
+
+.descricaoMedico{
+    margin-left: 5%;
+    width: 25%;
+}
+
+.botaoConsulta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+    align-items: center;
+}
+
+#dadoInvisivel{
+    display: none;
+}
+
+.botaoConsulta button{
+    border: none;
+    background-color: rgb(23, 236, 87);
+    height: 4vh;
+    width: 20vh;
+    border-radius: 10px;
+    margin-top: 10%;
+}
+
+.botaoConsulta select{
+    background-color: transparent;
+    height: 4vh;
+    width: 21.2vh;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.botaoConsulta input{
+    background-color: transparent;
+    height: 4vh;
+    width: 21vh;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-width: 1px;
+}
+
+
+/* FIM-FILTROS */
+
+/* FIM-MAIN */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+    background-color: rgb(51, 110, 54);
+    bottom: 0;
+    width: 100%;
+    height: 4rem; 
+    position: fixed;
+}
+
+/* FIM-FOOTER */

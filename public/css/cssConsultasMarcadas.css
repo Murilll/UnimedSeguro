@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+.header{
+    color: white;
+    background: url(../imagem/CoresVerdeERoxo.png) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    z-index: -3;
+
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    background-color: black;
+
+    -webkit-box-shadow: -1px 7px 18px -4px rgba(0,0,0,1);
+-moz-box-shadow: -1px 7px 18px -4px rgba(0,0,0,1);
+box-shadow: -1px 7px 18px -4px rgba(0,0,0,1);
+}
+
+.nome{
+    margin-left: 2vh;
+}
+
+.nome{
+    margin-left: 2vh;
+}
+
+.nome a{
+    text-decoration: none; 
+    color: white; 
+    transition: 0.2s;
+}
+
+.nome a:hover{
+    font-size: 105%;
+    transition: 0.2s;
+}
+
+.imagem{
+    margin-left: 2vh;
+}
+
+/* FIM HEADER */
+
+/* MAIN */
+
+.consultas{
+    margin-left: 10%;
+    margin-right: 10%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.consulta{
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(214, 61, 61);
+    height: 30vh;
+    width: 50vh;
+    margin-top: 5%;
+}
+
+/*FIM-MAIN*/
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+    background-color: rgb(51, 110, 54);
+    bottom: 0;
+    width: 100%;
+    height: 4rem; 
+    position: fixed;
+}
+
+/* FIM-FOOTER */
+

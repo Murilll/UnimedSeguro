@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/login.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <title>Unimed | Cadastrar</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logoUnimed" style="padding-top: 1.3vh;">
+            <img src="imagem/unimedLogo.png" width="110vw">
+        </div>
+        <div class="logoBosch" style="padding-top: 1.6vh; margin-left: 3vh;">
+            <img src="imagem/bosch-logo.png" width="150vw;" >
+        </div>
+    </div>
+
+    <div class="login">
+        
+        <div class="dados">
+            <!-- FOTOOO -->
+            <form action="/CadastrarMedico" method="post" enctype="multipart/form-data">
+                <div class="foto">
+                    <img id="fotoUsuario" src="imagem/usuario.png" alt="">
+                    <input type="file" id="flImage" name="Foto" accept="image/*">
+                    <img id="more" src="imagem/mais.png" alt="">
+                </div>
+                <div class="inserir">
+                    <input type="text" name="Nome" placeholder=" Nome:" required>
+                    <input type="text" name="CPF_Medico" placeholder=" Documento:" required>
+                    <input type="text" name="Idade" placeholder=" Idade:" required>
+                    <input type="text" name="CRM" placeholder=" CRM:" required>
+                    <input type="text" name="Area" placeholder=" Area:" required>
+                    <input type="text" name="Senha" placeholder=" Senha:" required>
+                    <button type="submit">CADASTRAR</button>
+                </div>
+            </form>
+            <!-- FOOOTOOOO -->
+        </div>
+    </div>
+
+    <div class="footer">
+        .
+    </div>
+
+</body>
+<script src="js/scriptCadMedico.js"></script>
+</html>

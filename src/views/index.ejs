@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+    <title>Alunos</title>
+</head>
+
+<body>
+    <div class="headerbosch"></div>
+
+    <div class="header">
+        <div class="nav">
+            <div id="inicio">
+                <a href="/">&nbsp; CONTROLE DE ALUNOS</a>
+            </div>
+
+            <div id="boschLogo">
+                <img src="img/logobosch.png" style="width: 150px; margin-top: -10%;">
+            </div>
+
+            <div id="final">
+                <a><b>Cadastrar: &nbsp; &nbsp;</b></a>
+                <a href="/aluno" id="teste">Alunos</a>
+                |
+                <a href="salas">Sala</a>
+            </div>
+        </div>
+    </div>
+    <main>
+    <div class="filtroSala">
+        <div style="padding-top: 1%;">Sala de Aula: &nbsp; &nbsp; </div>
+        <div>
+            <form action="/" method="POST">
+                <select id="salaAluno" onchange="this.form.submit()" name="salaid">
+                    <option value="cancel"></option>
+                    <% for (let i=0; i< salas.length; i++) { %>
+                        <option value='<%= salas[i].IDSala %>' <%=id==salas[i].IDSala ? 'selected' : '' %>>
+                            <%= salas[i].Nome %>
+                        </option>
+                        <% } %>
+                </select>
+            </form>
+            <%= alunos.length %> / <%= salaSelecionada.Capacidade %>
+            <br>
+            <form action="/editarSala/<%= id %>" method="get">
+                <button type="submit" value="enviar" id="enviar">Editar Sala</button>
+            </form>
+            
+        </div>
+    </div>
+
+
+    <div id="cont">
+        <div class="cards">
+            <% for (let i=0; i<alunos.length; i++) { %>
+                <div class="card">
+                    <div><img src="img/<%= alunos[i].Foto %>" style="border-radius: 100%;"></div>
+                    <div><b>Nome: <%= alunos[i].Nome %></b></div>
+                    <div>Idade: <%= alunos[i].Idade %></div>
+                    <form action="/editarAluno/<%= alunos[i].IDAluno %>" method="get">
+                        <button type="submit" value="enviar" id="enviar">Editar</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</main>
+
+    <footer>
+        <img src="img/logobosch.png" style="width: 150px;"><br>
+        ETS | Engineering Technical School ™<br>
+        <br><br>
+        <div class="headerbosch"></div>
+</footer>
+
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(121, 216, 118);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HEADER */
+.header{
+    display: flex;
+    height: 4rem;
+    background-color: rgb(51, 110, 54);
+    align-items: center;
+}
+
+.nome{
+    margin-left: 2vh;
+}
+
+.nome{
+    margin-left: 2vh;
+}
+
+.nome a{
+    text-decoration: none; 
+    color: black; 
+    transition: 0.2s;
+}
+
+.nome a:hover{
+    font-size: 105%;
+    transition: 0.2s;
+}
+
+.imagem{
+    margin-left: 2vh;
+}
+
+/* FIM HEADER */
+
+
+
+/* MAIN */
+
+/* INFOS */
+.quadro{
+    margin-top: 4%;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 70vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.infos{
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: rgb(197, 196, 196);
+    height: 25%;
+}
+
+.foto{
+    padding-top: 1.2vh;
+    padding-left: 1.7vh;
+    width: 15%;
+}
+
+.informacoes{
+    width: 70%;
+}
+
+.informacoes1{
+    display: flex;
+    flex-direction: column;
+}
+
+.informacoes1 input{
+    padding-left:1vh ;
+    width: 97.5%;
+    margin-top: 2%;
+    height: 3vh;
+    border-radius:10px;
+    border: none;
+}
+.informacoes2 input{
+    padding-left:1vh ;
+    width: 48%;
+    margin-top: 2%;
+    height: 3vh;
+    border-radius: 10px;
+    border: none;
+}
+/* FIM-INFOS */
+
+
+/* CONSULTAS */
+
+.consultas{
+    text-align: center;
+    border-radius: 10px;
+    height: 60%;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgb(170, 170, 170);
+}
+
+.consultas button{
+    margin-top: 3%;
+    width: 30%;
+    height: 3vh;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.consultas button:hover{
+    transition: 0.2s;
+    color: white;
+    background-color: rgb(212, 27, 27);
+    width: 40%;
+}
+/* FIM-MAIN */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+    background-color: rgb(51, 110, 54);
+    bottom: 0;
+    width: 100%;
+    height: 4rem; 
+    position: fixed;
+}
+
+/* FIM-FOOTER */

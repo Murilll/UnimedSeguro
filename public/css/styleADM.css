@@ -1,0 +1,244 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: rgb(121, 216, 118);
+}
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    background-color: rgb(51, 110, 54);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+header h3 {
+    color: white;
+    margin-left: 2vw;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.novoHeader {
+    display: block;
+    width: 100%;
+    height: 1vh;
+    padding: 0;
+    text-align: center;
+    color: white;
+    background: url(../imagem/CoresVerdeERoxo.png) no-repeat bottom center scroll;
+    background-position: 30% 45%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    z-index: -3;
+}
+
+/* FIM-HEADER */
+
+/* MAIN */
+
+/* Carrosserl */
+label {
+	background: #444;
+	color: #fff;
+	transition: transform 400ms ease-out;
+	display: inline-block;
+    min-height: 100%;
+	width: 100vw;
+	height: 50vh;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	line-height: 100vh;
+}
+
+label img {
+    width: 100vw;
+}
+
+form {
+	margin-top: 5vh;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	white-space: nowrap;
+}
+input {
+	position: absolute;
+}
+
+.keys {
+	position: fixed;
+	z-index: 10;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem;
+	color: #fff;
+	text-align: center;
+	transition: all 300ms linear;
+	opacity: 0;
+}
+
+input:focus ~ .keys {
+	opacity: 0.8;
+}
+
+input:nth-of-type(1):checked ~ label:nth-of-type(1), 
+input:nth-of-type(2):checked ~ label:nth-of-type(2),
+input:nth-of-type(3):checked ~ label:nth-of-type(3),
+input:nth-of-type(4):checked ~ label:nth-of-type(4){
+   z-index: 0;
+}
+
+input:nth-of-type(1):checked ~ label {
+	transform: translate3d(0, 0, 0);
+}
+
+input:nth-of-type(2):checked ~ label {
+	transform: translate3d(-100%, 0, 0);
+}
+
+input:nth-of-type(3):checked ~ label {
+	transform: translate3d(-200%, 0, 0);
+}
+
+input:nth-of-type(4):checked ~ label {
+	transform: translate3d(-300%, 0, 0);
+}
+
+label {
+	background: #444;
+	background-size: cover;
+	font-size: 3rem;
+}
+
+label[for="diamonds"],
+label[for="hearts"] {
+	background: #cc0000;
+}
+
+label:before,
+label:after {
+	color: white;
+	display: block;
+	background: rgba(255,255,255,0.2);
+	position: absolute;
+	padding: 1rem;
+	font-size: 3rem;
+	height: 10rem;
+	vertical-align: middle;
+	line-height: 10rem;
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+	cursor: pointer;
+}
+
+label:before {
+	content: "\276D";
+	right: 100%;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
+label:after {
+	content: "\276C";
+	left: 100%;
+	border-top-right-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+
+/* FimCarrosserl */
+
+/* CARDS */
+
+.cardSuperior {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 30%;
+    margin: 5%;
+    height: 35rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.card img {
+    margin-top: 3vh;
+    border-radius: 1vw;
+    display: flex;
+    width: 20vw;
+    height: 25vh;
+}
+
+.card button {
+    background-color: rgb(50, 151, 46);
+    border-radius: 5px;
+    border: none;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 10%;
+    width: 10vw;
+    font-size: large;
+    margin-top: 8vh;
+}
+
+.card button:hover {
+    
+}
+
+.card a {
+    text-decoration: none;
+    color: white;
+}
+
+/* FIM-CARDS */
+
+.text {
+    font-size: 2vw;
+    margin-top: 5vh;
+}
+
+/* FIM-MAIN */
+
+/* FOOTER */
+
+footer {
+    display: block;
+    width: 100%;
+    height: 7vh;
+    padding: 0;
+    text-align: center;
+    color: white;
+    background: url(../imagem/CoresVerdeERoxo.png) no-repeat bottom center scroll;
+    background-position: 30% 45%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    z-index: -3;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* FIM-FOOTER */

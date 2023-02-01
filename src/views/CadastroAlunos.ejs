@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
+    <title>Cadastro de Alunos</title>
+</head>
+
+<body>
+    <div class="headerbosch"></div>
+    <div class="header">
+        <div class="nav">
+            <div id="inicio">
+                <a href="/">&nbsp; CONTROLE DE ALUNOS</a>
+            </div>
+
+            <div id="boschLogo">
+                <img src="img/logobosch.png" style="width: 150px; margin-top: -10%;">
+            </div>
+
+            <div id="final">
+                <a><b>Cadastrar: &nbsp; &nbsp;</b></a>
+                <a href="alunos" id="teste">Alunos</a>
+                |
+                <a href="salas">Sala</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cont">
+        <form method="post" action="/aluno" enctype="multipart/form-data">
+            <div class="formAlunos">
+                <h2>CADASTRO DE ALUNOS</h2>
+
+                <div><img src="img/usuario.png" id="imgFoto" style="border-radius: 100px; width: 150px; height: 150px;">
+                </div>
+                <div><input type="file" id="flImage" name="foto" accept="image/*" style="display: none;"></div>
+                <div><input type="text" id="nomeAluno" name="nome" placeholder=" Nome"></div>
+                <div><input type="text" id="sexoAluno" name="sexo" placeholder="Sexo"></div>
+                <div><input type="text" id="idadeAluno" name="idade" placeholder="Idade"></div>
+
+                <div>
+                    <select id="salaAluno" name="sala">
+                        <option>Selecione</option>
+                        <% for (let i=0; i< salas.length; i++) { %>
+                            <option value='<%= salas[i].IDSala %>' <%= salaCheia[i] %> >
+                                <%= salas[i].Nome %>
+                            </option>
+                            <% } %>
+                    </select>
+                </div>
+
+                <input type="submit" value="Cadastrar" id="cadastrar"></input>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <img src="img/logobosch.png" style="width: 150px;"><br>
+        ETS | Engineering Technical School ™<br>
+        <br><br>
+    </div>
+    <div class="headerbosch"></div>
+
+
+
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

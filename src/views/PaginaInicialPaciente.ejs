@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/csspaciente.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagem/R.png">
+    <title>Paciente | Login</title>
+</head>
+
+<body>
+    <header>
+        <div id="headerBosch" onclick="headerBosch()">
+            <div id="escritaHeader">
+                <div id="logo">
+                    <img src="img/R.png" alt="">
+                </div>
+                <h3>BOSCH</h3>
+            </div>
+        </div>
+        <div class="title">
+            <div class="header">
+                <div class="imagem">
+                </div>
+
+                <div class="nome">
+                    <a href="../PaginaInicialPaciente.html">Seja bem vindo(a), <b>
+                            <%= nome %>
+                        </b></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="corpo">
+
+        <div class="cardSuperior">
+            <div class="card">
+                <img src="../imagem/R.jpg" alt="">
+                <div class="text">
+                    <h2>MARCAR CONSULTAS</h2>
+                    <br>
+                    Marque suas consultas no horário que melhor lhe atender com os medicos que temos disponiveis.
+
+                </div>
+                <button>
+                    <a href="/MarcarConsulta/<%= edv %>">CONTINUE</a>
+                </button>
+            </div>
+            <div class="card">
+                <img src="../imagem/R.jpg" alt="">
+                <div class="text">
+                    <h2>USUARIO</h2>
+                    <br>
+                    Informações pessoais sobre o usuário,também útil para visualizar suas consultas marcadas.
+                </div>
+                <button>
+                    <a href="/perfilPaciente/<%= edv %>">CONTINUE</a>
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <!--<img src="img/logo bosch.png" alt="" width="100px">-->
+        <h5 class="text">ETS | Engineering technician School </h5>
+        <div id="footerBosch"></div>
+    </footer>
+</body>
+
+</html>
