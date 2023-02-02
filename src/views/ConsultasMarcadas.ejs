@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/cssConsultasMarcadas.css" rel="stylesheet">
+    <link href="../css/cssConsultasMarcadas.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
@@ -19,7 +19,6 @@
 <body>
     <div class="header">
         <div class="imagem">
-            <img src="imagem/user.png">
         </div>
 
         <div class="nome">
@@ -27,14 +26,15 @@
         </div>
     </div>
 
-    <div class="consultas">
-        <div class="consulta" style="font-size: 2vh;">
-            <a>MEDICO: <b><%Medico tchunai%></b></a>
-            <a>DIA: <b><% dia %></b></a>
-            <a>HORARIO: <b><% horario %></b></a>
-            <a>TIPO: <b><% tipo %></b></a>
+    <% for (let i = 0; i < Consultas.length; i++){%>
+        <div class="consultas">
+            <div class="consulta" style="font-size: 2vh;">
+                <a>DIA: <b></b><%= Consultas[i].Data %></a>
+                <a>HORARIO: <b><%= Consultas[i].Time %></b></a>
+                <a>CPF Medico: <b><%= Consultas[i].CPF_Medico %></b></a>
+            </div>
         </div>
-    </div>
+    <%}%>
 
     <div class="footer">
     </div>

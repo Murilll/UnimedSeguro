@@ -166,6 +166,14 @@ input[type="file"] {
     background-color: rgb(245, 55, 55);
 }
 
+.inserir select{
+    width:100%;
+    margin-top: 5%;
+    height:4Vh;
+    border-radius: 10px;
+    border: none;
+}
+
 .texto{
     height: 20%;
 }

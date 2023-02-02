@@ -43,13 +43,19 @@ module.exports = {
             else if (id == '2') {
                 const medicos = await medico.findAll({
                     raw: true,
-                    attribrutes: ["CRM", "Senha", "Nome"]
+                    attribrutes: ["CRM", "Senha", "Nome","CPF_Medico"]
                 })
 
                 medicos.forEach(ele => {
 
                     if (dados.documento == ele.CRM && dados.senha == ele.Senha) {
                         const nome = ele.Nome;
+                        const cpf = ele.CPF_Medico
+
+                        
+                        res.cookie('DoctorName', nome)
+                        res.cookie('DoctorCRM', cpf)
+
                         res.render('../views/MedicoTela', {nome});
                     }
 
@@ -63,7 +69,7 @@ module.exports = {
 
                 ambulatorios.forEach(ele => {
 
-                    if (dados.documento == ele.CPF && dados.senha == ele.Senha) {
+                    if (dados.documento == ele.CPF_ADM && dados.senha == ele.Senha) {
                         const nome = ele.Nome;
                         res.render('../views/ADM', {nome});
                     }

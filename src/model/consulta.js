@@ -13,12 +13,12 @@ const consulta = database.define('Consulta', {
     },
 
     Data: {
-    type: Sequelize.DATE,
+    type: Sequelize.STRING,
     allowNull: false
     },
 
     Time: {
-    type: Sequelize.TIME,
+    type: Sequelize.STRING,
     allowNull: true
     }
 });
