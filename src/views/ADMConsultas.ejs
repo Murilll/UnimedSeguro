@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styleConsultas.css" rel="stylesheet">
+    <link href="../css/styleADMonsultas.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
@@ -14,12 +14,12 @@
     <div class="novoHeader"></div>
     <header>
         <a href="ADM.html">
-            <h3>Bem vindo Dr. <%=Flavio Almeida%></h3>
+            <h3>Bem vindo Dr</h3>
         </a>
     </header>
     <main>
         <div class="quadro">
-            <div class="pesquisar">
+            <!-- <div class="pesquisar">
                 <div class="data">
                     <img src="imagem/lupa.png" alt="">
                     <h5>Você procura por: </h5>
@@ -40,43 +40,26 @@
                         <option value="valor3">Geriatra</option>
                     </select>
                 </div>
-            </div>
-            <div class="card">
-                <h5>Pediatria</h5>
-                <div class="medicoCard">
-                    <div class="nomeDoutor">Nome: Flavio Almeida</div>
-                    <div class="CRM">CRM: 54400597</div>
-                </div>
-                <div class="medicoCard">
-                    <div class="nome">Nome: Maria Eduarda</div>
-                    <div class="CPF">CPF: 447.806.542-03</div>
-                </div>
-                <div class="medicoCard">
-                    <div class="data:">Data: 25/01/2023</div>
-                    <div class="horario">Horário: 08:00</div>
-                </div>
-            </div>
-            <div class="card">
-                <h5>Cardiologista</h5>
-                <div class="medicoCard">
-                    <div class="nomeDoutor">
-                        Nome: <%=Flavio Almeida%>
+            </div> -->
+            <% for (let i = 0; i < consultas.length; i++){ %>
+                <div class="card">
+                    <div class="medicoCard">
+                        <div class="nomeDoutor">CPF Medico</div>
+                        <div class="CRM"><%= consultas[i].CPF_Medico %></div>
                     </div>
-                    <div class="CRM">CRM: 54400597</div>
+                    <div class="medicoCard">
+                        <div class="nome">CPF Paciente</div>
+                        <div class="CPF"><%= consultas[i].CPF_Paciente%></div>
+                    </div>
+                    <div class="medicoCard">
+                        <div class="data:">Data</div>
+                        <div class="horario"><%= consultas[i].Data %></div>
+                    </div>
                 </div>
-                <div class="medicoCard">
-                    <div class="nome">Nome: Maria Eduarda</div>
-                    <div class="CPF">CPF: 447.806.542-03</div>
-                </div>
-                <div class="medicoCard">
-                    <div class="data:">Data: 25/01/2023</div>
-                    <div class="horario">Horário: 08:00</div>
-                </div>
-            </div>
+            <%}%>
         </div>
     </main>
     <footer>
-        .
     </footer>
 </body>
 </html>

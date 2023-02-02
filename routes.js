@@ -12,6 +12,8 @@ const home = require('./src/controllers/home');
 const cadastro = require('./src/controllers/cadastro');
 const consultas = require('./src/controllers/consultas');
 const paciente = require('./src/controllers/paciente');
+const adms = require('./src/controllers/adms');
+const medicos = require('./src/controllers/medicos');
 
 // Iniciando as rotas
 route.get('/', home.pagInicialGet);
@@ -38,9 +40,17 @@ route.post('/CadastrarADM', cadastro.admInsert);
 route.get('/MarcarConsulta/:id', consultas.Marcar);
 route.post('/MarcarConsulta', consultas.MarcarConsulta);
 
+
+
 route.get('/perfilPaciente/:id', paciente.pagPerfil);
 route.get('/verConsultas', paciente.verConsultas);
 
 
 
+route.get('/VerConsultasADM', adms.VerConsultas)
+route.get('/VerMedicosADM', adms.VerMedicos)
+
+
+
+route.get('/MedicoVerConsultas', medicos.VerConsultas)
 module.exports = route;

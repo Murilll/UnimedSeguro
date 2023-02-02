@@ -20,7 +20,6 @@ module.exports = {
 
     async verConsultas(req,res) {
         let Consultas = [];
-
         const cookie = req.headers.cookie
         const dadosCookie = cookie.split(";")
 

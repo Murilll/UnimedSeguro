@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styleConsultas.css" rel="stylesheet">
+    <link href="../css/styleMedicoConsulta.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
@@ -16,20 +16,15 @@
     </header>
     <main>
         <div class="quadro">
-            <div class="card">
-                <h5>Pediatria</h5>
-                <div class="medicoCard">
-                    <div class="nomeDoutor">Nome: Flavio Almeida</div>
+            <% for(let i = 0; i < Consultas.length; i++) {%>
+                <div class="card">
+                    <div class="medicoCard">
+                        <div class="EDV">Data: <%= Consultas[i].Data %></div>
+                        <div class="CPF">Horario: <%= Consultas[i].Time %></div>
+                        <div class="CRM">CPF Paciente: <%= Consultas[i].CPF_Paciente %></div>
+                    </div>
                 </div>
-                <div class="medicoCard">
-                    <div class="CRM">Endereço: Hospital Av. Rep. Argentina, 4650</div>        
-                </div>
-                <div class="medicoCard">
-                    <div class="EDV">54400927</div>
-                    <div class="CPF">CPF: 447.806.542-03</div>
-                    <div class="CRM">CRM: 54400597</div>
-                </div>
-            </div>
+            <%}%>
             <div class="pesquisar">
                 <div class="data">
                     <img src="imagem/lupa.png" alt="">
