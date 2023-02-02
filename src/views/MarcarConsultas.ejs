@@ -11,10 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <title>Paciente | Marcar Consultas</title>
 </head>
 
-<body>
+<body onload="excluirDia(<%=JSON.stringify(consultas)%>)">
     <div class="header">
 
         <div class="nome">
@@ -58,11 +59,15 @@
                     <h3><%= medicos[i].Area %> (RQE: 3762)</h3>
                 </div>
 
-
+                
                 <form method="post" action="/MarcarConsulta">
                     <div class="botaoConsulta">
-                        <input type="date" name="Data">
-                        <input type="time" name="Time">
+                        <input type="date" id="no-spin" name="date">
+                        <select name="Time" id="Time" required>
+                            <% for (let i=0; i<24; i++) { %>
+                                <option value='horario'><%= [i] %> : 00</option>
+                            <% } %>
+                        </select>
                         <input id="dadoInvisivel" type="text" name="CPF_Paciente" value="<%= edv %>" >
                         <input id="dadoInvisivel" type="text" name="CPF_Medico" value="<%= medicos[i].CPF_Medico%>" >
                         <button>Marcar Consulta</button>
@@ -79,5 +84,5 @@
 
     <script type="text/javascript" src="js/marcarConsulta.js"></script>
 </body>
-
+<script src="../js/marcarConsulta.js"></script>
 </html>

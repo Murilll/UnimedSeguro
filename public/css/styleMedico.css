@@ -10,6 +10,25 @@ body {
 
 /* HEADER */
 
+.header{
+    color: white;
+    background: url(../imagem/CoresVerdeERoxo.png) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    z-index: -3;
+
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    background-color: black;
+
+    -webkit-box-shadow: -1px 7px 18px -4px rgba(0,0,0,1);
+-moz-box-shadow: -1px 7px 18px -4px rgba(0,0,0,1);
+box-shadow: -1px 7px 18px -4px rgba(0,0,0,1);
+}
+
 .novoHeader {
     display: block;
     width: 100%;

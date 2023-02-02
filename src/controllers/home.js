@@ -63,7 +63,7 @@ module.exports = {
 
                 ambulatorios.forEach(ele => {
 
-                    if (dados.documento == ele.CPF && dados.senha == ele.Senha) {
+                    if (dados.documento == ele.CPF_ADM && dados.senha == ele.Senha) {
                         const nome = ele.Nome;
                         res.render('../views/ADM', {nome});
                     }

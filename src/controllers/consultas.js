@@ -5,16 +5,22 @@ const paciente = require('../model/paciente');
 
 
 module.exports = {
-    async Marcar(req, res){
+    async Marcar(req, res) {
         const edv = req.params.id;
         const medicos = await medico.findAll({
             raw: true,
             attribrutes: ["Nome", "CRM", "Area", "Foto", "CPF_Medico"]
         })
-        res.render('../views/MarcarConsultas', {medicos, edv});
+
+        const consultas = await consulta.findAll({
+            raw: true,
+            attribrutes: ["Data", "Time"]
+        })
+
+        res.render('../views/MarcarConsultas', { medicos, edv, consultas});
     },
 
-    async MarcarConsulta(req, res){
+    async MarcarConsulta(req, res) {
         const dados = req.body;
 
         const cookie = req.headers.cookie
@@ -26,16 +32,25 @@ module.exports = {
         let nome = nome1[1]
         const edv = edv1[1]
 
-        nome = nome.replace("%20"," ")
-
+        nome = nome.replace("%20", " ")
 
         await consulta.create({
-            Data: dados.Data,
+            Data: dados.date,
             Time: dados.Time,
             CPF_Paciente: dados.CPF_Paciente,
             CPF_Medico: dados.CPF_Medico
         })
 
-        res.render('../views/PaginaInicialPaciente', {nome, edv});
-    }
+        res.render('../views/PaginaInicialPaciente', { nome, edv });
+    },
+
+    // async ConsultasIndisponiveis(req, res) {
+    //     const diaConsulta = await consulta.findAll({ raw: true, attribrutes: ['Data']})
+
+    //     var today = new Date();
+    //     today.setDate(Data + 1);
+    //     today = today.toISOString().split('T')[0];
+
+    //     document.getElementsByName("date")[0].setAttribute('min', today);
+    // }
 }

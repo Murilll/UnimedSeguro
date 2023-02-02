@@ -1,10 +1,10 @@
 {
   "name": "unimedbosch",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +17,14 @@
     "multer": "^1.4.5-lts.1",
     "nodemon": "^2.0.20",
     "sequelize": "^6.28.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Murilll/UnimedSeguro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Murilll/UnimedSeguro/issues"
+  },
+  "homepage": "https://github.com/Murilll/UnimedSeguro#readme",
+  "description": ""
 }
