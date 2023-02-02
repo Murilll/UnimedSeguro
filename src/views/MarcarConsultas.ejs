@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <title>Paciente | Marcar Consultas</title>
 </head>
@@ -19,62 +21,74 @@
     <div class="header">
 
         <div class="nome">
-            <a href="PaginaInicialPaciente.html" >Seja bem vindo(a), <b>Fulano da Silva</b></a>
+            <a href="PaginaInicialPaciente.html">Seja bem vindo(a), <b>Fulano da Silva</b></a>
         </div>
     </div>
 
 
-    <div class="tipo_medico">
-        <span class="material-symbols-outlined">
-            search
-        </span>
-        <h4>&nbsp; Você procura por: &nbsp;</h4>
-        <select name="" id="">
-            <option value="">Pediatra</option>
-            <option value="">Oftalmonologista</option>
-            <option value="">Neurologista</option>
-        </select>
-    </div>
+    <form class="consulta" action="/MarcarConsulta" method="POST">
+        <div class="tipo_medico">
+            <span class="material-symbols-outlined">
+                search
+            </span>
+            <h4>&nbsp; Você procura por: &nbsp;</h4>
+            <select id="consultas" onchange="this.form.submit()" name="nome">
+                <% for (let i=0; i<Consulta.length; i++) { %>
+                    <option value='<%= consulta[i].IDConsulta %>' <%=id==consulta[i].IDConsulta ? 'selected' : '' %>> <%=
+                            Consulta[i].Nome %>
+                    </option>
+                    <% } %>
+            </select>
+        </div>
+    </form>
 
 
     <div class="corpo">
 
         <div class="medicos">
-            <%for (let i = 0; i < medicos.length;i++) { %>
-            
-            <div id="cardMedico">
-                <div class="fotoMedico">
-                    <img src="../imagem/medico1.jpg" style="max-width: 100%; max-height: 100%; border-radius: 10px;">
+            <%for (let i=0; i < medicos.length;i++) { %>
+
+                <div id="cardMedico">
+                    <div class="fotoMedico">
+                        <img src="../imagem/medico1.jpg"
+                            style="max-width: 100%; max-height: 100%; border-radius: 10px;">
+                    </div>
+
+
+                    <div class="descricaoMedico">
+                        <div class="nomeMedico">
+                            <h2>
+                                <%= medicos[i].Nome %>
+                            </h2>
+                        </div>
+                        <div class="crm">
+                            (CRM <%= medicos[i].CRM %>)
+                        </div>
+                        <br><br><br>
+                        <h3>
+                            <%= medicos[i].Area %> (RQE: 3762)
+                        </h3>
+                    </div>
+
+
+                    <form method="post" action="/MarcarConsulta">
+                        <div class="botaoConsulta">
+                            <input type="date" id="no-spin" name="date">
+                            <select name="Time" id="Time" required>
+                                <% for (let i=0; i<24; i++) { %>
+                                    <option value='horario'>
+                                        <%= [i] %> : 00
+                                    </option>
+                                    <% } %>
+                            </select>
+                            <input id="dadoInvisivel" type="text" name="CPF_Paciente" value="<%= edv %>">
+                            <input id="dadoInvisivel" type="text" name="CPF_Medico" value="<%= medicos[i].CPF_Medico%>">
+                            <button>Marcar Consulta</button>
+                        </div>
+                    </form>
+
                 </div>
-
-
-                <div class="descricaoMedico">
-                    <div class="nomeMedico">
-                        <h2><%= medicos[i].Nome %></h2>
-                    </div>
-                    <div class="crm">
-                        (CRM <%= medicos[i].CRM %>)
-                    </div>
-                    <br><br><br>
-                    <h3><%= medicos[i].Area %> (RQE: 3762)</h3>
-                </div>
-
-                
-                <form method="post" action="/MarcarConsulta">
-                    <div class="botaoConsulta">
-                        <input type="date" id="no-spin" name="date">
-                        <select name="Time" id="Time" required>
-                            <% for (let i=0; i<24; i++) { %>
-                                <option value='horario'><%= [i] %> : 00</option>
-                            <% } %>
-                        </select>
-                        <input id="dadoInvisivel" type="text" name="CPF_Paciente" value="<%= edv %>" >
-                        <input id="dadoInvisivel" type="text" name="CPF_Medico" value="<%= medicos[i].CPF_Medico%>" >
-                        <button>Marcar Consulta</button>
-                    </div>
-                </form>
-
-            </div><% } %>
+                <% } %>
         </div>
     </div>
 
@@ -85,4 +99,5 @@
     <script type="text/javascript" src="js/marcarConsulta.js"></script>
 </body>
 <script src="../js/marcarConsulta.js"></script>
+
 </html>
