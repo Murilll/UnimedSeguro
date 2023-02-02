@@ -70,6 +70,7 @@ module.exports = {
         });
 
         console.log(medicos)
-        res.render('../views/MarcarConsultas', { medicos, edv});
+        let marcou = 'false'
+        res.render('../views/MarcarConsultas', { medicos, edv, marcou});
     }
 }

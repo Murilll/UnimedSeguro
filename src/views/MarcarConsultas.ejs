@@ -70,21 +70,31 @@
                         </h3>
                     </div>
 
+                    <div class="botaoConsulta">
+                    <form method="post" action="/FiltroData">
+                        <input onchange="this.form.submit()" type="date" id="no-spin" name="date">
+                    </form>
 
-                    <form method="post" action="/MarcarConsulta">
-                        <div class="botaoConsulta">
-                            <input type="date" id="no-spin" name="date">
+                    <% if(marcou == 'True'){ %>
+                        <br>
+                        <form method="post" action="/MarcarConsulta">
                             <select name="Time" id="Time" required>
-                                <% for (let i=0; i<24; i++) { %>
-                                    <option value='horario'>
-                                        <%= [i] %> : 00
+                                <% for (var c of Disponiveis) { %>
+                                    <option value='<%= c %>' <%= c %>>
+                                        <%= [c] %> : 00
                                     </option>
-                                    <% } %>
+                                <% } %>
                             </select>
-                            <input id="dadoInvisivel" type="text" name="CPF_Paciente" value="<%= edv %>">
-                            <input id="dadoInvisivel" type="text" name="CPF_Medico" value="<%= medicos[i].CPF_Medico%>">
-                            <button>Marcar Consulta</button>
-                        </div>
+                            <input id="dadoInvisivel" type="text" name="date" value="<%= dia %>">
+                    <% } else {%>
+                        <br>
+                        SELECIONE O DIA PARA<br>MARCAR O HORARIO!
+                    <%}%>
+
+                        <input id="dadoInvisivel" type="text" name="CPF_Paciente" value="<%= edv %>">
+                        <input id="dadoInvisivel" type="text" name="CPF_Medico" value="<%= medicos[i].CPF_Medico%>">
+                        <button>Marcar Consulta</button>
+                    </div>
                     </form>
 
                 </div>

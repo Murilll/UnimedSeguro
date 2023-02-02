@@ -39,6 +39,7 @@ route.post('/MarcarConsultaFiltro', filtro.filtrarMedicoPost);
 
 route.get('/MarcarConsulta/:id', consultas.Marcar);
 route.post('/MarcarConsulta', consultas.MarcarConsulta);
+route.post('/FiltroData', consultas.Filtrar)
 
 
 route.get('/perfilPaciente/:id', paciente.pagPerfil);

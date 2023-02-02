@@ -8,6 +8,7 @@ const { verConsultas } = require('./paciente');
 module.exports = {
     async VerConsultas(req, res){
         let Consultas = [];
+        
         const cookie = req.headers.cookie
         const dadosCookie = cookie.split(";")
 
