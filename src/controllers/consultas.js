@@ -44,5 +44,13 @@ module.exports = {
         res.render('../views/PaginaInicialPaciente', { nome, edv });
     },
 
-    
+    // async ConsultasIndisponiveis(req, res) {
+    //     const diaConsulta = await consulta.findAll({ raw: true, attribrutes: ['Data']})
+
+    //     var today = new Date();
+    //     today.setDate(Data + 1);
+    //     today = today.toISOString().split('T')[0];
+
+    //     document.getElementsByName("date")[0].setAttribute('min', today);
+    // }
 }

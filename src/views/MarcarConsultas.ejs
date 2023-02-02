@@ -17,7 +17,7 @@
     <title>Paciente | Marcar Consultas</title>
 </head>
 
-<body onload="excluirDia(<%=JSON.stringify(consultas)%>)">
+<body>
     <div class="header">
 
         <div class="nome">
@@ -26,18 +26,18 @@
     </div>
 
 
-    <form class="consulta" action="/MarcarConsulta" method="POST">
+    <form class="medico" action="/MarcarConsultaFiltro" method="POST">
         <div class="tipo_medico">
             <span class="material-symbols-outlined">
                 search
             </span>
             <h4>&nbsp; Você procura por: &nbsp;</h4>
-            <select id="consultas" onchange="this.form.submit()" name="nome">
-                <% for (let i=0; i<Consulta.length; i++) { %>
-                    <option value='<%= consulta[i].IDConsulta %>' <%=id==consulta[i].IDConsulta ? 'selected' : '' %>> <%=
-                            Consulta[i].Nome %>
-                    </option>
-                    <% } %>
+            <select id="medico" onchange="this.form.submit()" name="nome">
+                <option value="Geriatra"></option>
+                <option value="Geriatra">Geriatra</option>
+                <option value="Pediatra">Pediatra</option>
+                <option value="Oftalmonologista">Oftalmonologista</option>
+                <option value="Cardiologista">Cardiologista</option>
             </select>
         </div>
     </form>
