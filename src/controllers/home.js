@@ -55,7 +55,7 @@ module.exports = {
                         
                         res.cookie('DoctorName', nome)
                         res.cookie('DoctorCRM', cpf)
-
+                        
                         res.render('../views/MedicoTela', {nome});
                     }
 

@@ -39,6 +39,7 @@ route.post('/CadastrarADM', cadastro.admInsert);
 
 route.get('/MarcarConsulta/:id', consultas.Marcar);
 route.post('/MarcarConsulta', consultas.MarcarConsulta);
+route.post('/FiltroData', consultas.Filtrar)
 
 
 
