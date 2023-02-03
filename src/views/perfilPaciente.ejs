@@ -17,14 +17,25 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="imagem">
+    <header>
+        <div id="headerBosch" onclick="headerBosch()">
+            <div id="escritaHeader">
+                <h3>BOSCH</h3>
+            </div>
         </div>
+        <div class="title">
+            <div class="header">
+                <div class="imagem">
+                </div>
 
-        <div class="nome">
-            <a href="PaginaInicialPaciente.html">Seja bem vindo(a), <b> <%=pacientes.Nome%></b></a>
+                <div class="nome">
+                    <a href="/PaginaInicialPaciente">Seja bem vindo(a), <b>
+                            <%= nome %>
+                        </b></a>
+                </div>
+            </div>
         </div>
-    </div>
+    </header>
 
     <div class="quadro">
         <br>
@@ -59,8 +70,11 @@
 
 
 
-    <div class="footer">
-    </div>
+    <footer>
+        <!--<img src="img/logo bosch.png" alt="" width="100px">-->
+        <h5 class="text">ETS | Engineering technician School </h5>
+        <div id="footerBosch"></div>
+    </footer>
 
 </body>
 

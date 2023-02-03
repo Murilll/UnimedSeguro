@@ -3,16 +3,33 @@
     margin: 0;
 }
 body{
-    background-color: rgb(121, 216, 118);
     font-family: 'Montserrat', sans-serif;
 }
 
 /* HEADER */
+#headerBosch{
+    display: block;
+    width: 100%;
+    height: 1vh;
+    padding: 0;
+    text-align: center;
+    color: white;
+    background: url(../imagem/cores.svg) no-repeat bottom center scroll;
+    background-position: 30% 45%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    transition: 2s;
+    z-index: -3;
+}
+
 .header{
     display: flex;
     height: 4rem;
-    background-color: rgb(51, 110, 54);
     align-items: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .nome{
@@ -142,12 +159,28 @@ body{
 
 /* FOOTER */
 
-.footer {
-    background-color: rgb(51, 110, 54);
+footer{
+    margin-top: 10vh;
+    color: rgb(92, 89, 89);
     bottom: 0;
-    width: 100%;
-    height: 4rem; 
+    width: 100vw;
     position: fixed;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#footerBosch{
+    display: block;
+    width: 100%;
+    height: 1vh;
+    color: white;
+    background: url(../imagem/cores.svg) no-repeat bottom center scroll;
+    background-position: 30% 45%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    bottom: 0;
 }
 
 /* FIM-FOOTER */

@@ -20,7 +20,7 @@ const filtro = require('./src/controllers/filtro');
 route.get('/', home.pagInicialGet);
 route.get('/Login/:id', home.pagLogin);
 route.post('/Verificar/:id', home.VerificarLogin);
-
+route.get('/PaginaInicialPaciente', home.PaginaInicial);
 
 route.get('/Cadastrar', cadastro.paciente);
 route.post('/Cadastrar', cadastro.pacienteInsert);
@@ -38,8 +38,8 @@ route.post('/MarcarConsultaFiltro', filtro.filtrarMedicoPost);
 
 
 route.get('/MarcarConsulta/:id', consultas.Marcar);
-route.post('/MarcarConsulta', consultas.MarcarConsulta);
-route.post('/FiltroData', consultas.Filtrar)
+route.post('/MarcarConsulta/:id', consultas.MarcarConsulta);
+route.post('/FiltroData/:id', consultas.Filtrar)
 
 
 route.get('/perfilPaciente/:id', paciente.pagPerfil);

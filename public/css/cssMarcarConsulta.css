@@ -3,14 +3,31 @@
     margin: 0;
 }
 body{
-    background-color: rgb(121, 216, 118);
     font-family: 'Montserrat', sans-serif;
 }
 .header{
     display: flex;
     height: 4rem;
-    background-color: rgb(51, 110, 54);
     align-items: center;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#headerBosch{
+    display: block;
+    width: 100%;
+    height: 1vh;
+    padding: 0;
+    text-align: center;
+    color: white;
+    background: url(../imagem/cores.svg) no-repeat bottom center scroll;
+    background-position: 30% 45%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    transition: 2s;
+    z-index: -3;
 }
 
 .nome{
@@ -32,7 +49,10 @@ body{
     margin-left: 2vh;
 }
 
-
+#escritaHeader{
+    padding-top: 3vh;
+    color: black;
+}
 
 
 
@@ -59,7 +79,7 @@ body{
     margin-top: 2%;
     height: 10%;
     display: flex;
-    background-color:rgb(255, 255, 255);
+    background-color:rgb(221, 221, 221);
     align-items: center;
 }
 
@@ -101,6 +121,10 @@ color: #999;
 }
 
 /* MEDICOS */
+
+#medico{
+    background-color: rgb(221, 221, 221);
+}
 .medicos{
     width: 60%;
     display: flex;
@@ -109,7 +133,8 @@ color: #999;
 }
 
 #cardMedico{
-    background-color: rgb(255, 255, 255);
+    color: white;
+    background-color: rgb(44, 73, 41);
     height: 20vh;
     margin-top: 2%;
     border-radius: 10px;
@@ -139,6 +164,18 @@ color: #999;
     width: 25%;
 }
 
+#Time{
+    background-color: aliceblue;
+    border: none;
+    border-radius: 5px;
+}
+
+#Date{
+    background-color: aliceblue;
+    border: none;
+    border-radius: 5px;
+}
+
 .botaoConsulta{
     display: flex;
     flex-direction: column;
@@ -153,12 +190,20 @@ color: #999;
 
 .botaoConsulta button{
     border: none;
-    background-color: rgb(23, 236, 87);
+    background-color: rgb(104, 177, 101);
     height: 4vh;
     width: 20vh;
     border-radius: 10px;
-    margin-top: 10%;
+    margin-top: 5%;
+    transition: 0.2s;
 }
+
+.botaoConsulta button:hover{
+    transition: 0.2s;
+    background-color: rgb(105, 240, 101);
+    cursor:pointer;
+}
+
 
 .botaoConsulta select{
     background-color: transparent;
@@ -200,12 +245,28 @@ color: #999;
 
 /* FOOTER */
 
-.footer {
-    background-color: rgb(51, 110, 54);
+footer{
+    margin-top: 10vh;
+    color: rgb(92, 89, 89);
     bottom: 0;
-    width: 100%;
-    height: 4rem; 
+    width: 100vw;
     position: fixed;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+#footerBosch{
+    display: block;
+    width: 100%;
+    height: 1vh;
+    color: white;
+    background: url(../imagem/cores.svg) no-repeat bottom center scroll;
+    background-position: 30% 45%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    bottom: 0;
 }
 
 /* FIM-FOOTER */

@@ -17,27 +17,44 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="imagem">
-        </div>
-
-        <div class="nome">
-            <a href="PaginaInicialPaciente.html">Seja bem vindo(a), <b>Fulano da Silva</b></a>
-        </div>
-    </div>
-
-    <% for (let i = 0; i < Consultas.length; i++){%>
-        <div class="consultas">
-            <div class="consulta" style="font-size: 2vh;">
-                <a>DIA: <b></b><%= Consultas[i].Data %></a>
-                <a>HORARIO: <b><%= Consultas[i].Time %></b></a>
-                <a>CPF Medico: <b><%= Consultas[i].CPF_Medico %></b></a>
+    <header>
+        <div id="headerBosch" onclick="headerBosch()">
+            <div id="escritaHeader">
+                <h3>BOSCH</h3>
             </div>
         </div>
-    <%}%>
+        <div class="title">
+            <div class="header">
+                <div class="imagem">
+                </div>
 
-    <div class="footer">
+                <div class="nome">
+                    <a href="../PaginaInicialPaciente">Seja bem vindo(a), <b>
+                            <%= nome %>
+                        </b></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="consultas">
+    <% for (let i = 0; i < Consultas.length; i++){%>
+        
+            <div class="consulta" style="font-size: 2vh;">
+                <a>DIA: <b></b><%= Consultas[i].Data %></a>
+                <a>HORARIO: <b><%= Consultas[i].Time %>:00</b></a>
+                <a>CPF Medico: <b><%= Consultas[i].CPF_Medico %></b></a>
+            </div>
+        
+    <%}%>
     </div>
+
+    <footer>
+        <!--<img src="img/logo bosch.png" alt="" width="100px">-->
+        <h5 class="text">ETS | Engineering technician School </h5>
+        <div id="footerBosch"></div>
+    </footer>
+    
 
 </body>
 
