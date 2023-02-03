@@ -13,50 +13,54 @@
 </head>
 
 <body>
+    <div class="novoHeader"></div>
     <div class="header">
+        <div class="logo"></div>
         <div class="logoUnimed" style="padding-top: 1.3vh;">
             <img src="imagem/unimedLogo.png" width="110vw">
         </div>
         <div class="logoBosch" style="padding-top: 1.6vh; margin-left: 3vh;">
-            <img src="imagem/bosch-logo.png" width="150vw;" >
+            <img src="imagem/bosch-logo.png" width="150vw;">
         </div>
     </div>
+    <main>
+        <div class="login">
 
-    <div class="login">
-        
-        <div class="dados">
-            <!-- FOTOOO -->
-            <form action="/CadastrarMedico" method="post" enctype="multipart/form-data">
-                <div class="foto">
-                    <img id="fotoUsuario" src="imagem/usuario.png" alt="">
-                    <input type="file" id="flImage" name="Foto" accept="image/*">
-                    <img id="more" src="imagem/mais.png" alt="">
-                </div>
-                <div class="inserir">
-                    <input type="text" name="Nome" placeholder=" Nome:" required>
-                    <input type="text" name="CPF_Medico" placeholder=" Documento:" required>
-                    <input type="text" name="Idade" placeholder=" Idade:" required>
-                    <input type="text" name="CRM" placeholder=" CRM:" required>
+            <div class="dados">
+                <!-- FOTOOO -->
+                <form action="/CadastrarMedico" method="post" enctype="multipart/form-data">
+                    <div class="foto">
+                        <img id="fotoUsuario" src="imagem/usuario.png" alt="">
+                        <input type="file" id="flImage" name="Foto" accept="image/*">
+                        <img id="more" src="imagem/mais.png" alt="">
+                    </div>
+                    <div class="inserir">
+                        <input type="text" name="Nome" placeholder=" Nome:" required>
+                        <input type="text" name="CPF_Medico" placeholder=" Documento:" required>
+                        <input type="text" name="Idade" placeholder=" Idade:" required>
+                        <input type="text" name="CRM" placeholder=" CRM:" required>
 
-                    <select name="Area">
-                        <option value="Geriatra">Geriatra</option>
-                        <option value="Pediatra">Pediatra</option>
-                        <option value="Oftalmonologista">Oftalmonologista</option>
-                        <option value="Cardiologista">Cardiologista</option>
-                    </select>
-                    
-                    <input type="text" name="Senha" placeholder=" Senha:" required>
-                    <button type="submit">CADASTRAR</button>
-                </div>
-            </form>
-            <!-- FOOOTOOOO -->
+                        <select name="Area">
+                            <option value="Geriatra">Geriatra</option>
+                            <option value="Pediatra">Pediatra</option>
+                            <option value="Oftalmonologista">Oftalmonologista</option>
+                            <option value="Cardiologista">Cardiologista</option>
+                        </select>
+
+                        <input type="text" name="Senha" placeholder=" Senha:" required>
+                        <button type="submit">CADASTRAR</button>
+                    </div>
+                </form>
+                <!-- FOOOTOOOO -->
+            </div>
         </div>
-    </div>
+    </main>
 
     <div class="footer">
-        .
+
     </div>
 
 </body>
 <script src="js/scriptCadMedico.js"></script>
+
 </html>

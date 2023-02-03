@@ -1,9 +1,25 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-body{
-    background-color: rgb(121, 216, 118);
+
+body {
+    background-color: rgb(215, 226, 214);
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: #393941;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(4, 41, 16);
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(23, 22, 24);
 }
 
 /* FOTOOOOO */
@@ -32,91 +48,155 @@ input[type="file"] {
     display: none;
 }
 
-#more{
+#more {
     width: 50px;
     position: absolute;
     cursor: pointer;
 }
 
-#more{
+#more {
     opacity: 0;
     transition: 0.5s;
 }
 
 /* FOTOOOOO */
-.header{
+
+main {
+    width: 100%;
+    height: 100%;
+    background: url(../imagem/tyler-nix-V3dHmb1MOXM-unsplash.jpg) no-repeat bottom center scroll;
+    background-position: 30% 45%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    z-index: -3;
+}
+
+.novoHeader {
+    display: block;
+    width: 100%;
+    height: 1vh;
+    padding: 0;
+    text-align: center;
+    color: white;
+    background: url(../imagem/CoresVerdeERoxo.png) no-repeat bottom center scroll;
+    background-position: 30% 45%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    z-index: -3;
+}
+
+.header {
     display: flex;
     height: 4rem;
-    background-color: rgb(51, 110, 54);
+    background-color: rgb(17, 49, 19);
+}
+
+.logo {
+    margin-left: 5vw;
 }
 
 
-.login{
+.login {
     font-family: 'Montserrat', sans-serif;
-    margin-top: 6vh;
+    /* margin-top: 3vh; */
     display: flex;
-    height: 50rem;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.login2 {
+    font-family: 'Montserrat', sans-serif;
+    /* margin-top: 3vh; */
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    background-size: cover;
 }
 
 
-.imagem{
-    margin-top: 8vh;
-    width: 50%;
+.imagem {
+    width: 10%;
+    height: 100%;
     margin-right: 5%;
-    margin-left: 15%;
-    border-radius: 20px;
-    background-image: url("../imagem/senhora.jpg");
-    height: 35rem;
-    background-size: cover; /*USAR PRA CARALHO*/
+    /* margin-left: 5%; */
+    background-image: url("../imagem/teemu-paananen-OOE4xAnBhKo-unsplash.jpg");
+    background-size: cover;
+    /*USAR PRA CARALHO*/
 }
 
-.opcoesDados{
+.imagem2 {
+    width: 10%;
+    height: 100%;
+    /* margin-right: 5%; */
+    margin-left: 5%;
+    background-image: url("../imagem/teemu-paananen-OOE4xAnBhKo-unsplash.jpg");
+    background-size: cover;
+    /*USAR PRA CARALHO*/
+    margin-right: 0;
+}
+
+.opcoesDados {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    height: 20rem;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.opcoes {
     margin-top: 10%;
     display: flex;
     flex-direction: column;
     text-align: center;
     height: 20rem;
     width: 50%;
-    margin-right: 15%;
     border-radius: 20px;
 }
 
-.opcoes{
+.opcoes2 {
     margin-top: 10%;
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 20rem;
     width: 50%;
-    margin-right: 15%;
+    height: 50%;
     border-radius: 20px;
+    background-image: url("../imagem/janke-laskowski-jz-ayLjk2nk-unsplash.jpg");
+    background-size: cover;
 }
 
-.opcoesLogin{
+.opcoesLogin {
     padding-left: 4vh;
     padding-right: 4vh;
     border-radius: 10px;
-    background-color: aliceblue;
-    width: 100%;
-    height: 40%;
+    color: rgb(0, 0, 0);
 }
-.botoesLogin{
+
+.botoesLogin {
     margin-top: 6%;
     height: 60%;
 }
 
 
-.opcoesCadastro{
+.opcoesCadastro {
     padding-left: 4vh;
     padding-right: 4vh;
     border-radius: 5px;
     margin-top: 10%;
-    background-color: aliceblue;
-    width: 100%;
-    height: 40%;
+    color: rgb(0, 0, 0);
 }
 
-.dados{
+.dados {
+    margin-top: 6vh;
     margin-left: 30%;
     margin-right: 30%;
     width: 100%;
@@ -124,11 +204,12 @@ input[type="file"] {
     display: flex;
     padding-top: 5%;
     flex-direction: column;
-    background-color: rgb(238, 234, 234);
-    border-radius: 40px;
+    background-color: rgb(234, 238, 235);
     align-items: center;
+    border-radius: 40px;
 }
-.inserir{
+
+.inserir {
     align-items: center;
     width: 100%;
     height: 100%;
@@ -137,11 +218,11 @@ input[type="file"] {
     justify-content: space-around;
 }
 
-.inserir{
+.inserir {
     width: 70%;
 }
 
-.dados form{
+.dados form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -149,52 +230,55 @@ input[type="file"] {
     width: 100%;
 }
 
-.inserir input{
-    width:100%;
-    height:4Vh;
+.inserir input {
+    width: 100%;
+    height: 4Vh;
     border-radius: 10px;
     border: none;
     margin-top: 5%;
 }
 
-.inserir button{
-    width:100%;
+.inserir button {
+    width: 100%;
     margin-top: 5%;
-    height:4Vh;
+    height: 4Vh;
     border-radius: 10px;
     border: none;
-    background-color: rgb(245, 55, 55);
+    background-color: rgb(17, 49, 19);
+    color: white;
 }
 
-.inserir select{
-    width:100%;
+.inserir select {
+    width: 100%;
     margin-top: 5%;
-    height:4Vh;
+    height: 4Vh;
     border-radius: 10px;
     border: none;
 }
 
-.texto{
+.texto {
     height: 20%;
+    margin-top: 2vw;
 }
 
-.botoes{
+.botoes {
     margin-top: 6%;
     display: flex;
     justify-content: space-around;
     height: 60%;
 }
 
-.botoes button{
-    background-color: rgb(50, 118, 243);
+.botoes button {
+    background-color: rgb(17, 49, 19);
     border-radius: 30px;
     border: none;
     font-size: large;
     width: 20vh;
     height: 50%;
+    color: white;
 }
 
-.botoes input{
+.botoes input {
     border-radius: 30px;
     margin-left: 20%;
     margin-right: 20%;
@@ -203,15 +287,17 @@ input[type="file"] {
     border: none;
 }
 
-.botoesDados button{
-    background-color: rgb(50, 118, 243);
+.botoesDados button {
+    background-color: rgb(17, 49, 19);
     border-radius: 30px;
     border: none;
     font-size: large;
     width: 100%;
     height: 4vh;
+    color: white;
 }
-.botoesDados input{
+
+.botoesDados input {
     border-radius: 30px;
     height: 4vh;
     width: 100%;
@@ -222,10 +308,38 @@ input[type="file"] {
 }
 
 
-.footer{
-    background-color: rgb(51, 110, 54);
-    position: absolute;
-    bottom: 0;
+/* .footer {
+    display: block;
     width: 100%;
-    height: 4rem; 
-}
+    height: 7vh;
+    padding: 0;
+    text-align: center;
+    color: white;
+    background: url(../imagem/CoresVerdeERoxo.png) no-repeat bottom center scroll;
+    background-position: 30% 45%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    z-index: -3;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} */
+
+/* .footer {
+    display: block;
+    width: 100%;
+    height: 1vh;
+    padding: 0;
+    text-align: center;
+    color: white;
+    background: url(../imagem/CoresVerdeERoxo.png) no-repeat bottom center scroll;
+    background-position: 30% 45%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    z-index: -3;
+    bottom: 0;
+} */
