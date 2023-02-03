@@ -13,9 +13,13 @@
 <body>
     <div class="novoHeader"></div>
     <header>
-        <a href="ADM.html">
-            <h3>Bem vindo Dr</h3>
-        </a>
+        <div class="nome" style="margin-top: 2vh;">
+            <a href="../MedicoTela.ejs" style="text-decoration: none; color: rgb(255, 255, 255);">Seja bem vindo(a),
+                <b>
+                    
+                </b>
+            </a>
+        </div>
     </header>
     <main>
         <div class="quadro">
@@ -44,22 +48,25 @@
             <% for (let i = 0; i < consultas.length; i++){ %>
                 <div class="card">
                     <div class="medicoCard">
-                        <div class="nomeDoutor">CPF Medico</div>
+                        <div class="data:">Data:</div>
+                        <div class="horario"><%= consultas[i].Data %></div>
+                    </div>
+                    <div class="medicoCard">
+                        <div class="nomeDoutor">CPF Medico:</div>
                         <div class="CRM"><%= consultas[i].CPF_Medico %></div>
                     </div>
                     <div class="medicoCard">
-                        <div class="nome">CPF Paciente</div>
+                        <div class="nome">CPF Paciente:</div>
                         <div class="CPF"><%= consultas[i].CPF_Paciente%></div>
-                    </div>
-                    <div class="medicoCard">
-                        <div class="data:">Data</div>
-                        <div class="horario"><%= consultas[i].Data %></div>
                     </div>
                 </div>
             <%}%>
         </div>
     </main>
     <footer>
+        <!--<img src="img/logo bosch.png" alt="" width="100px">-->
+        <h5 class="texttt">ETS | Engineering technician School </h5>
+        <div id="footerBosch"></div>
     </footer>
 </body>
 </html>

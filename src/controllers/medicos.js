@@ -21,6 +21,7 @@ module.exports = {
         console.log(crm)
         console.log(nome)
 
+        console.log(cookie)
         nome = nome.replace("%20"," ")
         const consultas = await consulta.findAll({
             raw: true,

@@ -42,8 +42,10 @@ route.post('/MarcarConsulta/:id', consultas.MarcarConsulta);
 route.post('/FiltroData/:id', consultas.Filtrar)
 
 
+
 route.get('/perfilPaciente/:id', paciente.pagPerfil);
 route.get('/verConsultas', paciente.verConsultas);
+route.get('/MostrarMedico/:id', paciente.MostrarMedico)
 
 
 route.get('/VerConsultasADM', adms.VerConsultas)

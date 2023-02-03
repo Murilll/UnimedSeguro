@@ -30,6 +30,7 @@ body {
 }
 
 .foto {
+    margin-top: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,6 +118,7 @@ main {
     height: 100vh;
     justify-content: center;
     background-size: cover;
+    background-image: url("../imagem/janke-laskowski-jz-ayLjk2nk-unsplash.jpg");
 }
 
 
@@ -170,8 +172,9 @@ main {
     width: 50%;
     height: 50%;
     border-radius: 20px;
-    background-image: url("../imagem/janke-laskowski-jz-ayLjk2nk-unsplash.jpg");
+    /* background-image: url("../imagem/janke-laskowski-jz-ayLjk2nk-unsplash.jpg"); */
     background-size: cover;
+    background-color: rgb(215, 226, 214);
 }
 
 .opcoesLogin {
@@ -202,7 +205,6 @@ main {
     width: 100%;
     height: 70vh;
     display: flex;
-    padding-top: 5%;
     flex-direction: column;
     background-color: rgb(234, 238, 235);
     align-items: center;
@@ -236,6 +238,8 @@ main {
     border-radius: 10px;
     border: none;
     margin-top: 5%;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 .inserir button {
@@ -246,14 +250,24 @@ main {
     border: none;
     background-color: rgb(17, 49, 19);
     color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.inserir button:hover{
+    transition: 0.2s;
+    background-color: rgb(33, 92, 37);
+    width: 105%;
 }
 
 .inserir select {
-    width: 100%;
+    width: 107%;
     margin-top: 5%;
     height: 4Vh;
     border-radius: 10px;
     border: none;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 
 .texto {
@@ -276,6 +290,14 @@ main {
     width: 20vh;
     height: 50%;
     color: white;
+    transition: 0.2s;
+}
+
+.botoes button:hover{
+    transition: 0.2s;
+    background-color: rgb(33, 92, 37);
+    width: 23vh;
+    cursor: pointer;
 }
 
 .botoes input {
@@ -292,21 +314,30 @@ main {
     border-radius: 30px;
     border: none;
     font-size: large;
-    width: 100%;
+    width: 50%;
     height: 4vh;
     color: white;
+    transition: 0.2s;
+}
+
+.botoesDados button:hover{
+    transition: 0.2s;
+    background-color: rgb(33, 92, 37);
+    width: 53%;
+    cursor: pointer;
 }
 
 .botoesDados input {
     border-radius: 30px;
     height: 4vh;
-    width: 100%;
+    width: 50%;
     margin-top: 1%;
     margin-bottom: 2%;
     font-size: large;
     border: none;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
-
 
 /* .footer {
     display: block;

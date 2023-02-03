@@ -35,12 +35,13 @@ module.exports = {
 
                         res.cookie('UserName', nome)
                         res.cookie('UserEdv', edv)
-
+                        console.log('entrei')
                         res.render('../views/PaginaInicialPaciente', {nome, edv});
                     }
                 });
             }
             else if (id == '2') {
+                console.log('entrei')
                 const medicos = await medico.findAll({
                     raw: true,
                     attribrutes: ["CRM", "Senha", "Nome","CPF_Medico"]
@@ -55,7 +56,6 @@ module.exports = {
                         
                         res.cookie('DoctorName', nome)
                         res.cookie('DoctorCRM', cpf)
-                        
                         res.render('../views/MedicoTela', {nome});
                     }
 
@@ -83,12 +83,13 @@ module.exports = {
         const cookie = req.headers.cookie
         const dadosCookie = cookie.split(";")
 
-        const nome1 = dadosCookie[0].split("=")
-        const edv1 = dadosCookie[1].split("=")
+        const nome1 = dadosCookie[2].split("=")
+        const edv1 = dadosCookie[3].split("=")
 
         let nome = nome1[1]
         const edv = edv1[1]
         nome = nome.replace("%20", " ")
+
 
         res.render('../views/PaginaInicialPaciente', {nome, edv})
     }

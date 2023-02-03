@@ -30,6 +30,11 @@ body{
     z-index: -3;
 }
 
+.text2 {
+    font-size: 2vw;
+    margin-top: 5vh;
+}
+
 .nome{
     margin-left: 2vh;
 }
@@ -54,9 +59,6 @@ body{
     color: black;
 }
 
-
-
-
 /* MAIN */
 .corpo{
     justify-content: center;
@@ -64,12 +66,7 @@ body{
     display: flex;
 }
 
-
-
-
 /* FILTROS */
-
-
 
 .tipo_medico{
     border-radius: 5px;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,17 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
     <title>Unimed | Medico</title>
 </head>
+
 <body>
     <div class="header"></div>
     <header>
         <div class="nome" style="margin-top: 2vh;">
-            <a href="../PaginaInicialPaciente.html" style="text-decoration: none; color: black;">Seja bem vindo(a), Dr.<b><%= nome %></b></a>
+            <a href="../MedicoTela.ejs" style="text-decoration: none; color: rgb(255, 255, 255);">Seja bem vindo(a),
+                Dr.<b>
+                    <%= nome %>
+                </b></a>
         </div>
     </header>
     <main>
-        <div class="carrousel">
-            <img src="../imagem/notamaxima_site.jpg" alt="">
-        </div>
+        <!-- Carrorel -->
+        <form>
+
+            <input type="radio" name="fancy" autofocus value="clubs" id="clubs" />
+            <input type="radio" name="fancy" value="hearts" id="hearts" />
+            <input type="radio" name="fancy" value="spades" id="spades" />
+            <input type="radio" name="fancy" value="diamonds" id="diamonds" />
+            <label for="clubs"><img src="../imagem/notamaxima_site.jpg" alt=""></label>
+            <label for="hearts"><img src="../imagem/Banner (2).png" alt=""></label>
+            <label for="spades"><img src="../imagem/2022_09_30 - UNIMED_BANNER-DIGITAL_V4_1440x411.jpg" alt=""></label>
+            <label for="diamonds"><img src="../imagem/191222_Portfolio_banner_site.png" alt=""></label>
+
+        </form>
+        <!-- Carrorel -->
         <div class="cardSuperior">
             <div class="card">
                 <img src="../imagem/R.jpg" alt="">
@@ -29,14 +45,16 @@
                 </div>
                 <form method="get" action="/MedicoVerConsultas">
                     <button>
-                    <a>CONTINUE</a>
+                        <a>CONTINUE</a>
                     </button>
                 </form>
             </div>
         </div>
     </main>
     <footer>
-        
+        <!--<img src="img/logo bosch.png" alt="" width="100px">-->
+        <h5 class="texttt">ETS | Engineering technician School </h5>
+        <div id="footerBosch"></div>
     </footer>
 </body>
 </html>

@@ -11,8 +11,14 @@
     <title>Unimed | Ver consultas</title>
 </head>
 <body>
+    <div class="novoHeader"></div>
     <header>
-       
+        <div class="nome" style="margin-top: 2vh;">
+            <a href="../MedicoTela.ejs" style="text-decoration: none; color: rgb(255, 255, 255);">Seja bem vindo(a),
+                Dr.<b>
+                    <%= nome %>
+                </b></a>
+        </div>
     </header>
     <main>
         <div class="quadro">
@@ -20,26 +26,17 @@
                 <div class="card">
                     <div class="medicoCard">
                         <div class="EDV">Data: <%= Consultas[i].Data %></div>
-                        <div class="CPF">Horario: <%= Consultas[i].Time %></div>
+                        <div class="CPF">Horario: <%= Consultas[i].Time %> : 00</div>
                         <div class="CRM">CPF Paciente: <%= Consultas[i].CPF_Paciente %></div>
                     </div>
                 </div>
             <%}%>
-            <div class="pesquisar">
-                <div class="data">
-                    <img src="imagem/lupa.png" alt="">
-                    <h5>Você procura por: </h5>
-                    <select name="opcao" id="opcao">
-                        <option value="valor1" disabled>Pesquisar</option>
-                        <option value="valor2">Data mais recente</option>
-                        <option value="valor3">Data mais antiga</option>
-                    </select>
-                </div>
-            </div>
         </div>
     </main>
     <footer>
-        .
+        <!--<img src="img/logo bosch.png" alt="" width="100px">-->
+        <h5 class="texttt">ETS | Engineering technician School </h5>
+        <div id="footerBosch"></div>
     </footer>
 </body>
 </html>

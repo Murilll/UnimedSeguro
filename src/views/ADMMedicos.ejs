@@ -15,10 +15,13 @@
 <body>
     <div class="novoHeader"></div>
     <header>
-        <a href="ADM.html">
-            <h3>Bem vindo Dr.
-            </h3>
-        </a>
+        <div class="nome" style="margin-top: 2vh;">
+            <a href="../MedicoTela.ejs" style="text-decoration: none; color: rgb(255, 255, 255);">Seja bem vindo(a),
+                <b>
+                    
+                </b>
+            </a>
+        </div>
     </header>
     <main>
         <div class="quadro">
@@ -26,15 +29,14 @@
                 <div class="Otro">
                     <br>
                     <div class="infos">
-                        <div class="foto">
+                        <!-- <div class="foto">
                             <img src="imagem/transferir.jpg" style="width: 75%;">
-                        </div>
+                        </div> -->
                         <div class="informacoes">
                             <div class="informacoes2">
                                 <input type="text" value=" Nome: <%= medicos[i].Nome %>" disabled>
                                 <input type="text" value=" Idade: <%= medicos[i].Idade %>" disabled>
                             </div>
-
                             <div class="informacoes2">
                                 <input type="text" value=" CRM: <%= medicos[i].CRM %>" disabled>
                                 <input type="text" value=" CPF: <%= medicos[i].CPF_Medico %>" disabled>
@@ -47,7 +49,9 @@
         </div>
     </main>
     <footer>
-        .
+        <!--<img src="img/logo bosch.png" alt="" width="100px">-->
+        <h5 class="texttt">ETS | Engineering technician School </h5>
+        <div id="footerBosch"></div>
     </footer>
 </body>
 

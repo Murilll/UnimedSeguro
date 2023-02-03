@@ -8,6 +8,12 @@ body {
 }
 
 /* HEADER */
+
+#escritaHeader{
+    padding-top: 3vh;
+    color: black;
+}
+
 #headerBosch{
     display: block;
     width: 100%;
@@ -73,13 +79,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: rgb(214, 61, 61);
+    background-color: rgb(221, 221, 221);
     height: 30vh;
     width: 20%;
     margin-right: 2%;
     margin-left: 2%;
     margin-top: 5%;
-}
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;}
 
 /*FIM-MAIN*/
 

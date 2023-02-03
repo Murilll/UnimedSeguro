@@ -34,7 +34,8 @@
             <div class="botoesDados">
                 <form action="/Verificar/<%= id %>" method="post">
                     <input type="text" name="documento" placeholder=" DOCUMENTO">
-                    <input type="text" name="senha" placeholder=" SENHA">
+                    <!-- <input type="text" name="senha" placeholder=" SENHA"> -->
+                    <input type="password" name="senha" placeholder=" SENHA" id="senha">
                     <button type="submit">ENTRAR</button>
                 </form>
             </div>
@@ -42,5 +43,6 @@
         <div class="imagem2"></div>
     </div>
 </body>
+<script src="../js/Dados.js"></script>
 
 </html>

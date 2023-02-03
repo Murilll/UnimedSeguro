@@ -38,18 +38,13 @@
     </header>
 
     <div class="consultas">
-    <% for (let i = 0; i < Consultas.length; i++){%>
         
             <div class="consulta" style="font-size: 2vh;">
-                <a>DIA: <b></b><%= Consultas[i].Data %></a>
-                <a>HORARIO: <b><%= Consultas[i].Time %>:00</b></a>
-                <a>CPF Medico: <b><%= Consultas[i].CPF_Medico %></b></a>
-                <a href="/MostrarMedico/<%= Consultas[i].CPF_Medico %>"><button>
-                    entrar
-                </button></a>
+                <a>NOME: <b></b><%= Medico.Nome %></a>
+                <a>IDADE: <b><%= Medico.Time %>:00</b></a>
+                <a>AREA: <b><%= Medico.Area %></b></a>
+                <a>CPF: <b><%= Medico.CPF_Medico %></b></a>
             </div>
-        
-    <%}%>
     </div>
 
     <footer>
