@@ -62,15 +62,16 @@ module.exports = {
 
         let nome = nome1[1]
         const edv = edv1[1]
-
+        nome = nome.replace("%20", " ")
+        const area = Area.nome
         const medicos = await medico.findAll({
             raw: true,
             attributes: ['CPF_Medico', 'Nome', 'Area'],
-            where: { Area: Area.nome }
+            where: { Area: area }
         });
 
         console.log(medicos)
         let marcou = 'false'
-        res.render('../views/MarcarConsultas', { medicos, edv, marcou});
+        res.render('../views/MarcarConsultas', { medicos, edv, marcou, area, nome});
     }
 }

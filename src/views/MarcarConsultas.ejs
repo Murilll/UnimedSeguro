@@ -18,12 +18,25 @@
 </head>
 
 <body>
-    <div class="header">
-
-        <div class="nome">
-            <a href="PaginaInicialPaciente.html">Seja bem vindo(a), <b>Fulano da Silva</b></a>
+    <header>
+        <div id="headerBosch" onclick="headerBosch()">
+            <div id="escritaHeader">
+                <h3>BOSCH</h3>
+            </div>
         </div>
-    </div>
+        <div class="title">
+            <div class="header">
+                <div class="imagem">
+                </div>
+
+                <div class="nome">
+                    <a href="/PaginaInicialPaciente">Seja bem vindo(a), <b>
+                            <%= nome %>
+                        </b></a>
+                </div>
+            </div>
+        </div>
+    </header>
 
 
     <form class="medico" action="/MarcarConsultaFiltro" method="POST">
@@ -56,6 +69,7 @@
 
 
                     <div class="descricaoMedico">
+                        <br>
                         <div class="nomeMedico">
                             <h2>
                                 <%= medicos[i].Nome %>
@@ -71,29 +85,31 @@
                     </div>
 
                     <div class="botaoConsulta">
-                    <form method="post" action="/FiltroData">
-                        <input onchange="this.form.submit()" type="date" id="no-spin" name="date">
-                    </form>
+                        <form method="post" action="/FiltroData/<%= area %>">
+                            <input onchange="this.form.submit()" type="date" id="Date" name="date">
+                        </form>
 
-                    <% if(marcou == 'True'){ %>
-                        <br>
-                        <form method="post" action="/MarcarConsulta">
-                            <select name="Time" id="Time" required>
-                                <% for (var c of Disponiveis) { %>
-                                    <option value='<%= c %>' <%= c %>>
-                                        <%= [c] %> : 00
-                                    </option>
-                                <% } %>
-                            </select>
-                            <input id="dadoInvisivel" type="text" name="date" value="<%= dia %>">
-                    <% } else {%>
-                        <br>
-                        SELECIONE O DIA PARA<br>MARCAR O HORARIO!
-                    <%}%>
+                        <% if(marcou=='True' ){ %>
+                            DIA MARCADO: <%= dia %>
+                                <br>
+                                <form method="post" action="/MarcarConsulta/<%=area%>">
+                                    <select name="Time" id="Time" required>
+                                        <% for (var c of Disponiveis) { %>
+                                            <option value='<%= c %>' <%=c %>>
+                                                <%= [c] %> : 00
+                                            </option>
+                                            <% } %>
+                                    </select>
+                                    <input id="dadoInvisivel" type="text" name="date" value="<%= dia %>">
+                        <% } else {%>
+                            SELECIONE O DIA PARA<br>MARCAR O HORARIO!
+                            <%}%>
 
-                        <input id="dadoInvisivel" type="text" name="CPF_Paciente" value="<%= edv %>">
-                        <input id="dadoInvisivel" type="text" name="CPF_Medico" value="<%= medicos[i].CPF_Medico%>">
-                        <button>Marcar Consulta</button>
+                                <input id="dadoInvisivel" type="text" name="CPF_Paciente"
+                                    value="<%= edv %>">
+                                <input id="dadoInvisivel" type="text" name="CPF_Medico"
+                                    value="<%= medicos[i].CPF_Medico%>">
+                                <button>Marcar Consulta</button>
                     </div>
                     </form>
 
@@ -102,8 +118,12 @@
         </div>
     </div>
 
-    <div class="footer">
-    </div>
+    <footer>
+        <!--<img src="img/logo bosch.png" alt="" width="100px">-->
+        <h5 class="text">ETS | Engineering technician School </h5>
+        <div id="footerBosch"></div>
+    </footer>
+
 
 
     <script type="text/javascript" src="js/marcarConsulta.js"></script>

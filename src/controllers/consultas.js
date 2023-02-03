@@ -10,6 +10,15 @@ module.exports = {
         const edv = req.params.id;
         const marcou = 'False'
 
+        const cookie = req.headers.cookie
+        const dadosCookie = cookie.split(";")
+
+        const nome1 = dadosCookie[0].split("=")
+
+        let nome = nome1[1]
+        nome = nome.replace("%20", " ")
+        console.log(nome)
+
         const medicos = await medico.findAll({
             raw: true,
             attribrutes: ["Nome", "CRM", "Area", "Foto", "CPF_Medico"]
@@ -20,12 +29,13 @@ module.exports = {
             attribrutes: ["Data", "Time"]
         })
 
-        res.render('../views/MarcarConsultas', { medicos, edv, consultas, marcou});
+        res.render('../views/MarcarConsultas', { medicos, edv, consultas, marcou, area : " ", nome});
     },
 
     
     async MarcarConsulta(req, res) {
         const dados = req.body;
+        const area = req.params.id
 
         const cookie = req.headers.cookie
         const dadosCookie = cookie.split(";")
@@ -38,6 +48,12 @@ module.exports = {
 
         nome = nome.replace("%20", " ")
 
+        const medicos = await medico.findAll({
+            raw: true,
+            attributes: ['CPF_Medico', 'Nome', 'Area'],
+            where: { Area: area }
+        });
+
         await consulta.create({
             Data: dados.date,
             Time: dados.Time,
@@ -45,12 +61,13 @@ module.exports = {
             CPF_Medico: dados.CPF_Medico
         })
 
-        res.render('../views/PaginaInicialPaciente', { nome, edv });
+        res.render('../views/PaginaInicialPaciente', { nome, edv, medicos});
     },
 
     async Filtrar(req, res) {
         let Disponiveis = []
         let dia = req.body;
+        const area = req.params.id
 
         const cookie = req.headers.cookie
         
@@ -65,19 +82,22 @@ module.exports = {
         const edv = edv1[1]
 
         dia = dia.date
-        
+
+        nome = nome.replace("%20", " ")
         
         const medicos = await medico.findAll({
             raw: true,
-            attribrutes: ["Nome", "CRM", "Area", "Foto", "CPF_Medico"]
-        })
+            attributes: ['CPF_Medico', 'Nome', 'Area'],
+            where: { Area: area }
+        });
+        
 
         const consultas = await consulta.findAll({
             raw: true,
             attribrutes: ["Data", "Time", "CPF_Medico"]
         })
 
-        
+
         for (let i = 8; i < 24 ; i++)
         {
             Disponiveis.push(i);
@@ -96,7 +116,7 @@ module.exports = {
             }
         }
 
-        res.render('../views/MarcarConsultas', { medicos, edv, consultas, nome, Disponiveis, marcou, dia});
+        res.render('../views/MarcarConsultas', { medicos, edv, consultas, nome, Disponiveis, marcou, dia, area});
         
     }
 
