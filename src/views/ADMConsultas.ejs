@@ -8,16 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="icon" href="/imagem/LogoPreto.png">
     <title>Unimed | Ver consultas</title>
 </head>
 <body>
     <div class="novoHeader"></div>
     <header>
         <div class="nome" style="margin-top: 2vh;">
-            <a href="../MedicoTela.ejs" style="text-decoration: none; color: rgb(255, 255, 255);">Seja bem vindo(a),
-                <b>
-                    
-                </b>
+            <a href="../MedicoTela.ejs" style="text-decoration: none; color: rgb(255, 255, 255);">Seja bem vindo(a)
             </a>
         </div>
     </header>
@@ -49,15 +47,15 @@
                 <div class="card">
                     <div class="medicoCard">
                         <div class="data:">Data:</div>
-                        <div class="horario"><%= consultas[i].Data %></div>
+                        <div class="horario"><b><%= consultas[i].Data %></b></div>
                     </div>
                     <div class="medicoCard">
                         <div class="nomeDoutor">CPF Medico:</div>
-                        <div class="CRM"><%= consultas[i].CPF_Medico %></div>
+                        <div class="CRM"><b><%= consultas[i].CPF_Medico %></b></div>
                     </div>
                     <div class="medicoCard">
                         <div class="nome">CPF Paciente:</div>
-                        <div class="CPF"><%= consultas[i].CPF_Paciente%></div>
+                        <div class="CPF"><b><%= consultas[i].CPF_Paciente%></b></div>
                     </div>
                 </div>
             <%}%>

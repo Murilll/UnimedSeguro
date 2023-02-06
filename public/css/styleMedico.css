@@ -211,16 +211,24 @@ header {
 }
 
 .card button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(50, 151, 46);
     border-radius: 5px;
     border: none;
-    margin-left: 20%;
-    margin-right: 20%;
     height: 2vw;
     width: 10vw;
     font-size: large;
-    margin-top: 8vh;
     color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card button:hover {
+    transition: 0.2s;
+    width: 11vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .card a {

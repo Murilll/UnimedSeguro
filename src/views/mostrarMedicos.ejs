@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/cssConsultasMarcadas.css" rel="stylesheet">
+    <link href="../css/cssMostrarMedicosUser.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" href="/imagem/LogoPreto.png">
     <title>Paciente | Consultas</title>
 </head>
 
@@ -40,8 +41,8 @@
     <div class="consultas">
         
             <div class="consulta" style="font-size: 2vh;">
-                <a>NOME: <b></b><%= Medico.Nome %></a>
-                <a>IDADE: <b><%= Medico.Time %>:00</b></a>
+                <a>NOME: <b><%= Medico.Nome %></b></a>
+                <a>IDADE: <b><%= Medico.Idade %></b></a>
                 <a>AREA: <b><%= Medico.Area %></b></a>
                 <a>CPF: <b><%= Medico.CPF_Medico %></b></a>
             </div>

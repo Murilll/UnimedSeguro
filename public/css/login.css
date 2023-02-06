@@ -275,6 +275,10 @@ main {
     margin-top: 2vw;
 }
 
+.teste {
+    padding: 3vw;
+}
+
 .botoes {
     margin-top: 6%;
     display: flex;

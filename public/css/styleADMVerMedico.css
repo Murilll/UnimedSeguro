@@ -74,7 +74,7 @@ main{
 }
 
 .Otro{
-    height: 20vh;
+    height: 30vh;
     width: 70vw;
     background-color: rgb(255, 255, 255);
 }
@@ -82,10 +82,8 @@ main{
 .infos{
     display: flex;
     justify-content: center;
-    margin-left: 2%;
-    margin-right: 2%;
     background-color: rgb(197, 196, 196);
-    height: 20vh;
+    height: 100%;
     border-radius: 20px;
 }
 
@@ -119,10 +117,11 @@ main{
 }
 .informacoes2 input{
     width: 49%;
-    margin-top: 2%;
-    height: 3vh;
+    margin-top: 3%;
+    height: 5vh;
     border-radius: 10px;
     border: none;
+    font-size: large;
 }
 
 /* FIM-MAIN */

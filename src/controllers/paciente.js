@@ -12,8 +12,8 @@ module.exports = {
         const cookie = req.headers.cookie
         const dadosCookie = cookie.split(";")
 
-        const nome1 = dadosCookie[2].split("=")
-        const edv1 = dadosCookie[3].split("=")
+        const nome1 = dadosCookie[0].split("=")
+        const edv1 = dadosCookie[1].split("=")
 
         let nome = nome1[1]
         const edv = edv1[1]
@@ -33,8 +33,8 @@ module.exports = {
         const cookie = req.headers.cookie
         const dadosCookie = cookie.split(";")
 
-        const edv1 = dadosCookie[3].split("=")
-        const nome1 = dadosCookie[2].split("=")
+        const edv1 = dadosCookie[1].split("=")
+        const nome1 = dadosCookie[0].split("=")
 
         let nome = nome1[1]
         const edv = edv1[1]
@@ -64,8 +64,8 @@ module.exports = {
         const cookie = req.headers.cookie
         const dadosCookie = cookie.split(";")
 
-        const edv1 = dadosCookie[3].split("=")
-        const nome1 = dadosCookie[2].split("=")
+        const edv1 = dadosCookie[1].split("=")
+        const nome1 = dadosCookie[0].split("=")
 
         let nome = nome1[1]
         const edv = edv1[1]

@@ -90,7 +90,22 @@ body {
 /*FIM-MAIN*/
 
 
+.consultas button {
+    margin-top: 3%;
+    width: 10vw;
+    height: 3vh;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
 
+.consultas button:hover {
+    transition: 0.2s;
+    background-color: rgb(216, 216, 216);
+    width: 11vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 
 
@@ -101,6 +116,7 @@ body {
 /* FOOTER */
 
 footer{
+    position: fixed;
     margin-top: 10vh;
     color: rgb(92, 89, 89);
     bottom: 0;
